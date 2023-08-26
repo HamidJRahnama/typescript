@@ -59,4 +59,37 @@ console.log("sum5: optional", sum5());
 // ##############################
 console.log("");
 
+let persons1: {
+  firstName: string;
+  lastName: string;
+  age: number;
+} = {
+  firstName: "Hamid",
+  lastName: "Raha",
+  age: 20,
+};
+console.log("person1: ", persons1);
+
+type personType = {
+  firstName: string;
+  lastName: string;
+  age: number;
+};
+
+let person2: personType = {
+  firstName: "ali",
+  lastName: "alizade",
+  age: 81,
+};
+console.log("person2: ", person2);
+let person3: personType = {
+  firstName: "mamad",
+  lastName: "mamad zadeh",
+  age: 27,
+};
+console.log("person3: ", person3);
+console.log("");
+// ##############################
+console.log("");
+
 console.log("");
