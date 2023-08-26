@@ -90,6 +90,41 @@ let person3: personType = {
 console.log("person3: ", person3);
 console.log("");
 // ##############################
+//  CLASS
+
+class cars {
+  public model: string;
+  public year: number;
+  constructor(text: string, num: number) {
+    this.model = text;
+    this.year = num;
+  }
+}
+console.log(new cars("peykan", 2003));
+
+let car1 = new cars("pejo", 2000);
+console.log("car1: ", car1);
+
+let car2 = new cars("peraid", 2020);
+console.log("car2: ", car2);
+console.log("car2.model: ", car2.model);
 console.log("");
 
+class person {
+  // در حالت رید اونلی قثط در
+  // کانستراکتور میتوان مقدار را تغییر داد
+  readonly firsName: string;
+  lastName: string;
+  age: number;
+  constructor(firsName: string, lastName: string, age: number) {
+    this.firsName = "reza";
+    this.lastName = lastName;
+    this.age = age;
+  }
+}
+let person1 = new person("hamid", "raha", 10);
+console.log(person1);
+// person1.firsName = "ja,o";
+
+// ##############################
 console.log("");
