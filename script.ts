@@ -1,21 +1,56 @@
 class Person {
-  name: string;
-  age: number;
-  isDead: boolean;
+  public name: string;
+  private age: number;
+  protected isDead: boolean;
 
   constructor(name: string, age: number, isDead: boolean) {
     this.name = name;
     this.age = age;
     this.isDead = isDead;
   }
+
+  set setPerson(age: number) {
+    this.age = age;
+  }
+  get getPerson() {
+    return this.name;
+  }
 }
-let person1 = new Person("ali", 33, false);
-let person2 = new Person("mahdi", 19, true);
-let person3 = new Person("Hamid", 23, false);
+let person1 = new Person("Hamidd", 23, false);
 
-console.log((person1.name = "rez"));
+person1.setPerson = 34;
 
-console.log(person1);
+console.log("Getter==>", person1.getPerson);
+
+//#######################################################################################
+
+// class Person {
+//   public name: string;
+//   private age: number;
+//   protected isDead: boolean;
+
+//   constructor(name: string, age: number, isDead: boolean) {
+//     this.name = name;
+//     this.age = age;
+//     this.isDead = isDead;
+//   }
+//   walk() {
+//     console.log(this.isDead);
+//   }
+// }
+//   class guy extends Person{
+//     blind(){
+//       console.log(this.name);   //  name is Public
+//       console.log(this.age);    //  Error : age is Privet
+//       console.log(this.isDead); //  isDead is Protected
+//       console.log(this.walk()); //  walk() is Public
+//     }
+//   }
+// let person1 = new Person("ali", 33, false);
+// console.log(person1.name);      //  name is Public
+// console.log(person1.age);       //  Error : age is Privet
+// console.log(person1.isDead);    //  Error : isDead is Protected
+// console.log(person1.walk());    //  walk() is Public
 
 //#######################################################################################
 
