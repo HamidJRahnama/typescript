@@ -1,22 +1,89 @@
-class Car {
-  private static instance: Car;
-
-  private constructor() {}
-
-  public static getInstance(): Car {
-    if (!Car.instance) {
-      Car.instance = new Car();
-    }
-    return Car.instance;
-  }
-
-  // methods and properties
+interface Person {
+  name: string;
+  family: string;
+  age: number;
+  fullname(): string;
 }
 
-let car1 = Car.getInstance();
-let car2 = Car.getInstance();
+class Amir implements Person {
+  constructor(public name: string, public family: string, public age: number) {}
+  fullname(): string {
+    return "";
+  }
+}
 
-console.log(car1 === car2); //  ==> True
+class Alex implements Person {
+  constructor(public name: string, public family: string, public age: number) {}
+
+  fullname(): string {
+    return this.name + " " + this.family;
+  }
+}
+
+class Hesam implements Person {
+  constructor(public name: string, public family: string, public age: number) {}
+
+  fullname(): string {
+    return this.name + " " + this.family;
+  }
+}
+
+class Ali implements Person {
+  constructor(public name: string, public family: string, public age: number) {}
+
+  fullname(): string {
+    return this.name + " " + this.family;
+  }
+}
+
+let user: Person = new Hesam("hesam", "family", 26);
+user = new Alex("hesam", "family", 26);
+
+console.log(user.fullname());
+
+//#######################################################################################
+
+// interface lableType {
+//   title: string;
+//   size: number;
+//   id: string | number;
+// }
+// function printLable(lable: lableType) {
+//   console.log(lable);
+// }
+
+// let lable1 = { title: "lable Title", size: 10, id: 30 };
+// let lable2 = { title: "Seek around And find out", size: 20, id: "30_hdf" };
+// let lable3 = {
+//   title: "More fuck around , more u find out",
+//   id: "26_HA",
+//   size: 83,
+// };
+// printLable(lable1);
+// printLable(lable2);
+// printLable(lable3);
+
+//#######################################################################################
+
+// class Car {
+//   private static instance: Car;
+
+//   private constructor() {}
+
+//   public static getInstance(): Car {
+//     if (!Car.instance) {
+//       Car.instance = new Car();
+//     }
+//     return Car.instance;
+//   }
+
+//   // methods and properties
+// }
+
+// let car1 = Car.getInstance();
+// let car2 = Car.getInstance();
+
+// console.log(car1 === car2); //  ==> True
 
 //#######################################################################################
 

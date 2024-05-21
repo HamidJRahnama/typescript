@@ -1,22 +1,104 @@
 "use strict";
-class Car {
-    constructor(name, color, door, id) {
+class Amir {
+    constructor(name, family, age) {
         this.name = name;
-        Car.color = color;
-        this.door = door;
-        this.id = id;
+        this.family = family;
+        this.age = age;
+    }
+    fullname() {
+        return "";
     }
 }
-let car1 = new Car("name", "red", 2, "3_nu");
-car1.id = "dont go"; //  Error : the property is " Read Only "
-console.log(car1);
+class Alex {
+    constructor(name, family, age) {
+        this.name = name;
+        this.family = family;
+        this.age = age;
+    }
+    fullname() {
+        return this.name + " " + this.family;
+    }
+}
+class Hesam {
+    constructor(name, family, age) {
+        this.name = name;
+        this.family = family;
+        this.age = age;
+    }
+    fullname() {
+        return this.name + " " + this.family;
+    }
+}
+class Ali {
+    constructor(name, family, age) {
+        this.name = name;
+        this.family = family;
+        this.age = age;
+    }
+    fullname() {
+        return this.name + " " + this.family;
+    }
+}
+let user = new Hesam("hesam", "family", 26);
+user = new Alex("hesam", "family", 26);
+console.log(user.fullname());
+//#######################################################################################
+// interface lableType {
+//   title: string;
+//   size: number;
+//   id: string | number;
+// }
+// function printLable(lable: lableType) {
+//   console.log(lable);
+// }
+// let lable1 = { title: "lable Title", size: 10, id: 30 };
+// let lable2 = { title: "Seek around And find out", size: 20, id: "30_hdf" };
+// let lable3 = {
+//   title: "More fuck around , more u find out",
+//   id: "26_HA",
+//   size: 83,
+// };
+// printLable(lable1);
+// printLable(lable2);
+// printLable(lable3);
+//#######################################################################################
+// class Car {
+//   private static instance: Car;
+//   private constructor() {}
+//   public static getInstance(): Car {
+//     if (!Car.instance) {
+//       Car.instance = new Car();
+//     }
+//     return Car.instance;
+//   }
+//   // methods and properties
+// }
+// let car1 = Car.getInstance();
+// let car2 = Car.getInstance();
+// console.log(car1 === car2); //  ==> True
+//#######################################################################################
+// class Car {
+//   public name: string;
+//   static color: string;
+//   public door: number;
+//   readonly id: string;
+//   constructor(name: string, color: string, door: number, id: string) {
+//     this.name = name;
+//     Car.color = color;
+//     this.door = door;
+//     this.id = id;
+//   }
+// }
+// let car1 = new Car("name", "red", 2, "3_nu");
+// car1.id = "dont go"; //  Error : the property is " Read Only "
+// console.log(car1);
 //#######################################################################################
 // abstract class Car {
 //   public name: string;
 //   public color: string;
 //   public door: number;
 //   protected id: string;
-//   constructor(name: string, color: string, door: number, id: string) {
+//   constructor(name: string, color: string, door: nu    mber, id: string) {
 //     this.name = name;
 //     this.color = color;
 //     this.door = door;
