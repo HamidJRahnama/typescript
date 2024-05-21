@@ -1,26 +1,100 @@
-class Person {
-  public name: string;
-  private age: number;
-  protected isDead: boolean;
+class Car {
+  private static instance: Car;
 
-  constructor(name: string, age: number, isDead: boolean) {
-    this.name = name;
-    this.age = age;
-    this.isDead = isDead;
+  private constructor() {}
+
+  public static getInstance(): Car {
+    if (!Car.instance) {
+      Car.instance = new Car();
+    }
+    return Car.instance;
   }
 
-  set setPerson(age: number) {
-    this.age = age;
-  }
-  get getPerson() {
-    return this.name;
-  }
+  // methods and properties
 }
-let person1 = new Person("Hamidd", 23, false);
 
-person1.setPerson = 34;
+let car1 = Car.getInstance();
+let car2 = Car.getInstance();
 
-console.log("Getter==>", person1.getPerson);
+console.log(car1 === car2); //  ==> True
+
+//#######################################################################################
+
+// class Car {
+//   public name: string;
+//   static color: string;
+//   public door: number;
+//   readonly id: string;
+
+//   constructor(name: string, color: string, door: number, id: string) {
+//     this.name = name;
+//     Car.color = color;
+//     this.door = door;
+//     this.id = id;
+//   }
+// }
+// let car1 = new Car("name", "red", 2, "3_nu");
+// car1.id = "dont go"; //  Error : the property is " Read Only "
+
+// console.log(car1);
+
+//#######################################################################################
+
+// abstract class Car {
+
+//   public name: string;
+//   public color: string;
+//   public door: number;
+//   protected id: string;
+
+//   constructor(name: string, color: string, door: nu    mber, id: string) {
+//     this.name = name;
+//     this.color = color;
+//     this.door = door;
+//     this.id = id;
+//   }
+
+//   abstract demoFun(): string;
+
+//   foo(): void {
+//     console.log(this.demoFun());
+//   }
+// }
+
+// class iranKhodro extends Car {
+//   demoFun() {
+//     return "dd";
+//   }
+// }
+
+// let car1 = new iranKhodro("iran khodro title", "red", 4, "45_IK");
+// console.log(car1.foo());
+
+//#######################################################################################
+
+// class Person {
+//   public name: string;
+//   private age: number;
+//   protected isDead: boolean;
+
+//   constructor(name: string, age: number, isDead: boolean) {
+//     this.name = name;
+//     this.age = age;
+//     this.isDead = isDead;
+//   }
+
+//   set setPerson(age: number) {
+//     this.age = age;
+//   }
+//   get getPerson() {
+//     return this.name;
+//   }
+// }
+// let person1 = new Person("Hamidd", 23, false);
+
+// person1.setPerson = 34;
+
+// console.log("Getter==>", person1.getPerson);
 
 //#######################################################################################
 

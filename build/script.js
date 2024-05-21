@@ -1,20 +1,59 @@
 "use strict";
-class Person {
-    constructor(name, age, isDead) {
+class Car {
+    constructor(name, color, door, id) {
         this.name = name;
-        this.age = age;
-        this.isDead = isDead;
-    }
-    set setPerson(age) {
-        this.age = age;
-    }
-    get getPerson() {
-        return this.name;
+        Car.color = color;
+        this.door = door;
+        this.id = id;
     }
 }
-let person1 = new Person("Hamidd", 23, false);
-person1.setPerson = 34;
-console.log("Getter==>", person1.getPerson);
+let car1 = new Car("name", "red", 2, "3_nu");
+car1.id = "dont go"; //  Error : the property is " Read Only "
+console.log(car1);
+//#######################################################################################
+// abstract class Car {
+//   public name: string;
+//   public color: string;
+//   public door: number;
+//   protected id: string;
+//   constructor(name: string, color: string, door: number, id: string) {
+//     this.name = name;
+//     this.color = color;
+//     this.door = door;
+//     this.id = id;
+//   }
+//   abstract demoFun(): string;
+//   foo(): void {
+//     console.log(this.demoFun());
+//   }
+// }
+// class iranKhodro extends Car {
+//   demoFun() {
+//     return "dd";
+//   }
+// }
+// let car1 = new iranKhodro("iran khodro title", "red", 4, "45_IK");
+// console.log(car1.foo());
+//#######################################################################################
+// class Person {
+//   public name: string;
+//   private age: number;
+//   protected isDead: boolean;
+//   constructor(name: string, age: number, isDead: boolean) {
+//     this.name = name;
+//     this.age = age;
+//     this.isDead = isDead;
+//   }
+//   set setPerson(age: number) {
+//     this.age = age;
+//   }
+//   get getPerson() {
+//     return this.name;
+//   }
+// }
+// let person1 = new Person("Hamidd", 23, false);
+// person1.setPerson = 34;
+// console.log("Getter==>", person1.getPerson);
 //#######################################################################################
 // class Person {
 //   public name: string;
