@@ -1,47 +1,96 @@
 "use strict";
-class Amir {
-    constructor(name, family, age) {
-        this.name = name;
-        this.family = family;
-        this.age = age;
-    }
-    fullname() {
-        return "";
-    }
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+function auth(params) {
+    console.log(params);
 }
-class Alex {
-    constructor(name, family, age) {
-        this.name = name;
-        this.family = family;
-        this.age = age;
+let Users = class Users {
+    constructor() {
+        this.name = "hamid";
     }
-    fullname() {
-        return this.name + " " + this.family;
-    }
-}
-class Hesam {
-    constructor(name, family, age) {
-        this.name = name;
-        this.family = family;
-        this.age = age;
-    }
-    fullname() {
-        return this.name + " " + this.family;
-    }
-}
-class Ali {
-    constructor(name, family, age) {
-        this.name = name;
-        this.family = family;
-        this.age = age;
-    }
-    fullname() {
-        return this.name + " " + this.family;
-    }
-}
-let user = new Hesam("hesam", "family", 26);
-user = new Alex("hesam", "family", 26);
-console.log(user.fullname());
+};
+Users = __decorate([
+    auth
+], Users);
+let user1 = new Users();
+//#######################################################################################
+// function logger1<TYPE>(data: TYPE): TYPE {
+//   return data;
+// }
+// console.log(logger1<string>("92"));
+// let logger2 = <TYPE>(data: TYPE): TYPE => {
+//   return data;
+// };
+// console.log(logger2<boolean>(false));
+// // we can use type
+// type logger3Type = <TYPE>(data: TYPE) => TYPE;
+// let logger3: logger3Type;
+// logger3 = function <TYPE>(data: TYPE) {
+//   return data;
+// };
+// console.log(logger3<string>("looger3"));
+// // we can use interface
+// interface logger4Type<TYPE> {
+//   (data: TYPE): TYPE;
+// }
+// let logger4: logger4Type<number>;
+// logger4 = function <TYPE>(data: TYPE): TYPE {
+//   return data;
+// };
+// console.log(logger4(8743));
+// // ????????????????????
+// //  we can use in Class
+// class MyArray<TYPE> {
+//   constructor(public data: TYPE[]) {}
+//   addItem(item: TYPE) {
+//     this.data.push(item);
+//   }
+//   getItem(index: number) {
+//     return this.data[index];
+//   }
+// }
+// let list = new MyArray<string>(["a", "b", "c"]);
+// list.addItem("new data");
+// list.getItem(4);
+// console.log(list);
+//#######################################################################################
+// interface Person {
+//   name: string;
+//   family: string;
+//   age: number;
+//   fullname(): string;
+// }
+// class Amir implements Person {
+//   constructor(public name: string, public family: string, public age: number) {}
+//   fullname(): string {
+//     return "";
+//   }
+// }
+// class Alex implements Person {
+//   constructor(public name: string, public family: string, public age: number) {}
+//   fullname(): string {
+//     return this.name + " " + this.family;
+//   }
+// }
+// class Hesam implements Person {
+//   constructor(public name: string, public family: string, public age: number) {}
+//   fullname(): string {
+//     return this.name + " " + this.family;
+//   }
+// }
+// class Ali implements Person {
+//   constructor(public name: string, public family: string, public age: number) {}
+//   fullname(): string {
+//     return this.name + " " + this.family;
+//   }
+// }
+// let user: Person = new Hesam("hesam", "family", 26);
+// user = new Alex("hesam", "family", 26);
+// console.log(user.fullname());
 //#######################################################################################
 // interface lableType {
 //   title: string;
